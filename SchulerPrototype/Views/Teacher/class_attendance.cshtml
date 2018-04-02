@@ -1,0 +1,405 @@
+﻿
+@{
+    ViewBag.Title = "Teacher - Class Attendance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    .dataTables_length {
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+
+    .badge-info {
+        background-color: #5bc0de;
+    }
+
+    .present {
+        color: #28A745;
+        font-size: 1.45em;
+    }
+
+    .absent {
+        color: #dc3545;
+        font-size: 1.45em;
+    }
+
+    .late {
+        color: #FFC107;
+        font-size: 1.45em;
+    }
+
+    .excuse {
+        color: #17A2B8;
+        font-size: 1.45em;
+    }
+
+    .wend {
+        color: #000000;
+        font-size: 1.45em;
+    }
+
+    .stud-panel-lg {
+        border-radius: 4px;
+        border: 2px solid #44A5C9 !important;
+        width: 70px;
+        height: 83px;
+    }
+
+    .attendance {
+        background-color: #D3D3D3;
+        width: 67px;
+        height: 21px;
+        text-align: center;
+        font-size: 10px;
+        border-radius: 2px;
+    }
+
+        .attendance p {
+            padding-top: 5px;
+        }
+
+    td, th {
+        text-align: center;
+    }
+</style>
+
+<div class="page-header" style="color: #000033">
+    <br />
+    <h2><strong>Teacher Management</strong></h2>
+</div>
+<ol class="breadcrumb" style="background-color: #D9EDF7">
+    <li><a href="@Url.Action("Index", "superadmin")"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+    <li>Class Attendance</li>
+</ol>
+<!-- your code start here -->
+<!-- Please observe indention -->
+<div class="page-header" style="color: #000033">
+    <h2>My Class Attendance</h2>
+    <h4>S.Y 2017 - 2018</h4>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="tab-content">
+            <div id="my-classes" class="tab-pane fade in active">
+                <div class="panel panel-custom">
+                    <div class="panel-heading" style="font-size: 20px; font-weight: 300;"><i class="fa fa-address-book-o" aria-hidden="true"></i> Class List</div>
+                    <div class="panel-body">
+                        <h3 style="text-align: center; margin-top: 2px;">My Classes</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group contact-search m-b-30">
+                                        <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table id="myTable" class="display nowrap table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10%;">#</th>
+                                            <th style="width: 10%;">Grade</th>
+                                            <th style="width: 10%;">Section</th>
+                                            <th style="width: 40%;">Subject</th>
+                                            <th style="width: 20%;">Schedule</th>
+                                            <th style="width: 10%;"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                Grade 2
+                                            </td>
+                                            <td>
+                                                Section B
+                                            </td>
+                                            <td>English 102</td>
+                                            <td>
+                                                7:00 AM - 9:00 AM
+                                            </td>
+                                            <td>
+                                                <button type="button" data-toggle="modal" data-target="#viewClass" class="btn btn-info btn-xs center-block view-class" style="width: 70px; height: 30px; font-size: 15px;">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                Grade 1
+                                            </td>
+                                            <td>
+                                                Section A
+                                            </td>
+                                            <td>English 101</td>
+                                            <td>
+                                                9:00 AM - 11:00 AM
+                                            </td>
+                                            <td>
+                                                <button type="button" data-toggle="modal" data-target="#viewClass" class="btn btn-info btn-xs center-block view-class" style="width: 70px; height: 30px; font-size: 15px;">View</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal ViewClass -->
+            <div id="viewClass" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">View Class</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-custom">
+                                        <div class="panel-heading">
+                                            <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                                            &nbspClass Information
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="panel panel-custom">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                        <table class="table">
+                                                            <tr>
+                                                                <td>
+                                                                    Grade:
+                                                                </td>
+                                                                <td>
+                                                                    <span>
+                                                                        Grade 1
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Section:
+                                                                </td>
+                                                                <td>
+                                                                    <span>
+                                                                        Section A
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Subject:
+                                                                </td>
+                                                                <td>
+                                                                    <span>English 101</span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                        <table class="table">
+                                                            <tr>
+                                                                <td>
+                                                                    Room No:
+                                                                </td>
+                                                                <td>
+                                                                    <span class="badge badge-info">Rm. 101</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Number of Student:
+                                                                </td>
+                                                                <td>
+                                                                    <span class="badge badge-info">
+                                                                        11
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Schedule:
+                                                                </td>
+                                                                <td>
+                                                                    <span>11:00 AM - 12:00 PM</span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="row">
+                                                    <div class="panel panel-custom">
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <table class="table">
+                                                                    <tr>
+                                                                        <td>
+                                                                            Total Male Students:
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="badge badge-info">30</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            Total Female Students:
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="badge badge-info">30</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <table class="table">
+                                                                    <tr>
+                                                                        <td>
+                                                                            Total Present:
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="badge" style="background: #28A745 !important;">10</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            Total Absent:
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="badge" style="background: #dc3545!important;">10</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="row">
+                                                    <div class="panel panel-custom">
+                                                        <div class="row">
+                                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                <table class="table">
+                                                                    <tr>
+                                                                        <td>
+                                                                            Teacher:
+                                                                        </td>
+                                                                        <td>
+                                                                            Time-in
+                                                                        </td>
+                                                                        <td>
+                                                                            Class Start
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            Mrs. Jane Doe
+                                                                        </td>
+                                                                        <td>
+                                                                            7:00 AM
+                                                                        </td>
+                                                                        <td>
+                                                                            7:00 AM
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="row">
+                                                    <div class="panel panel-custom" style="overflow-x: auto !important;">
+                                                        <center><h4>Students List</h4></center>
+                                                        <div class="table-responsive">
+                                                            <div class="container">
+                                                                <table id="stud-attendance" class="table table-hover table-responsive">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Student ID</th>
+                                                                            <th>Image</th>
+                                                                            <th>Name</th>
+                                                                            <th>Date & Time In</th>
+                                                                            <th>Date & Time Out</th>
+                                                                            <th>Status</th>
+                                                                        </tr>
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td><img src="~/Content/images/teacher.png" width="30" height="30" /></td>
+                                                                            <td>Juan Dela Cruz</td>
+                                                                            <td>03/17/18 9:11AM</td>
+                                                                            <td>03/17/18 5:20PM</td>
+                                                                            <td>Late</td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td><img src="~/Content/images/teacher.png" width="30" height="30" /></td>
+                                                                            <td>Genesis Ivan Aquino</td>
+                                                                            <td>03/17/18 8:00AM</td>
+                                                                            <td>03/17/18 5:20PM</td>
+                                                                            <td>Present</td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td><img src="~/Content/images/teacher.png" width="30" height="30" /></td>
+                                                                            <td>Markwell Ong</td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td>
+                                                                                <div class="dropdown" style="cursor: pointer;">
+                                                                                    <text id="attendanceButton" class="text-danger dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                                                        Absent
+                                                                                        <span class="caret"></span>
+                                                                                    </text>
+                                                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="min-width: inherit!important;">
+                                                                                        <li><a id="attendanceAbsent" data-value="Absent" style="display: none;">Absent</a></li>
+                                                                                        <li><a id="attendanceExcused" data-value="Excused">Excused</a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td><img src="~/Content/images/teacher.png" width="30" height="30" /></td>
+                                                                            <td>Nicole Baniqued</td>
+                                                                            <td>03/17/18 1:11PM</td>
+                                                                            <td>03/17/18 5:20PM</td>
+                                                                            <td>Late</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="hidden" name="class-id" id="class-id" value="">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of your code -->
+            <!-- footer here -->
+        </div>
+    </div>
+</div>

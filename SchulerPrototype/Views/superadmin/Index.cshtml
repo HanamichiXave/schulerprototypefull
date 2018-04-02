@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "SuperAdmin";
+}
+
+<div class="container">
+    <br>
+    <br>
+    <div class="page-header" style="color: #000033">
+        <center><h2><strong>Super Admin Management</strong></h2><br /></center>
+    </div>
+    <!-- your code start here -->
+    <!-- Please observe indention -->
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 center-block">
+            <a href="@Url.Action("InOutLog", "Security")">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="~/Content/images/security.png" height="100" width="100" alt="" />
+                    <div class="overlay">
+                        <h2>Security</h2>
+                        <p class="info">
+                            Encompasses everything from the supervision of security officers to protect the school.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 center-block">
+            <a href="@Url.Action("Teacher", "superadmin")">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="~/Content/images/teacher.png" height="100" width="100" alt="" />
+                    <div class="overlay">
+                        <h2>Teacher</h2>
+                        <p class="info">
+                            Managing lesson plans, students grades, and reports for the assigned class.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

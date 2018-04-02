@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "Security";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" >
+    <br>
+    <br>
+    <div class="page-header" style="color: #000033"><h2><strong>Security Management</strong></h2></div>
+      <ol class="breadcrumb" style="background-color: #D9EDF7">
+          <li><a href="{{URL::Route('security')}}"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+          <li>Dashboard</li>
+      </ol>
+     <section>
+        <!-- your code start here -->
+        <!-- Please observe indention -->
+        <div class="col-lg-12">
+          <div class="container-2">
+           <div id="page-wrapper">
+              <div class="row" >
+                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="circle-tile">
+                       <a href="#">
+                          <div class="circle-tile-heading green db-container">
+                             <i class="fa fa-users fa-fw fa-3x"></i>
+                          </div>
+                       </a>
+                       <div class="circle-tile-content green db-container">
+                          <div class="circle-tile-description text-faded">
+                             Daily Visitors
+                          </div>
+                          <div class="circle-tile-number text-faded">
+                             34
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 
+                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="circle-tile">
+                       <a href="#">
+                          <div class="circle-tile-heading blue db-container">
+                             <i class="fa fa-users fa-fw fa-3x"></i>
+                          </div>
+                       </a>
+                       <div class="circle-tile-content blue db-container">
+                          <div class="circle-tile-description text-faded">
+                             Weekly Visitors
+                          </div>
+                          <div class="circle-tile-number text-faded">
+                             240
+                             <span id="sparklineB"></span>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="circle-tile">
+                       <a href="#">
+                          <div class="circle-tile-heading red db-container">
+                             <i class="fa fa-users fa-fw fa-3x"></i>
+                          </div>
+                       </a>
+                       <div class="circle-tile-content red db-container">
+                          <div class="circle-tile-description text-faded">
+                             Monthly Visitors
+                          </div>
+                          <div class="circle-tile-number text-faded">
+                             1987
+                             <span id="sparklineC"></span>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <!-- page-wrapper END-->
+          </div>
+        </div>
+         
+          <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+              <div class="db-container" style="position: relative; width:auto;">
+                <canvas id="myChartline" style="margin-bottom: 50px;"></canvas>
+              </div>
+          </div>
+          <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+              <div class="db-container" style="position: relative; width:auto;">
+                <canvas id="myChartpie" height="215px"></canvas>
+              </div>
+          </div>
+          <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+              <div class="db-container" style="position: relative; width:auto;">
+                <canvas id="myChartbar" style="margin-bottom: 50px;"></canvas>
+              </div>
+          </div>
+          <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+              <div class="db-container" style="position: relative; width:auto;">
+                <canvas id="myBarGroupChart" height="215px"></canvas>
+              </div>
+          </div>
+     </section>
+   
+  </div>

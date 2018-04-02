@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/Content/logonatin.png">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/datatables")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/datatables")
+    @Scripts.Render("~/Scripts/js/Teacher/tclassattendance.js")
+    @RenderSection("scripts", required: false)
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <link href="@Href(@ViewBag.Style)" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-findcond navbar-fixed-top" style="margin-bottom: 0;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="col-lg-4 navbar-brand custom-brand" href="#" style="color: white;">
+                    <img class="schuler" src="~/Content/logonatin.png" height="25" width="30" />
+                </a>
+                <a class="navbar-brand schulercolor" href="@Url.Action($"Index", $"superadmin")">SchulerTrack</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Notifications <span class="badge">3</span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Teacher is not on class!</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Warning</span> 10 students are late in Grade v - Magalang.</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Note</span> Mrs. Tanchoco teacher of Grade 3 - Matapat is not on...</a>
+                            </li>
+                            <li class="divider">|</li>
+                            <li>
+                                <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> &nbsp&nbsp&nbspSee all notifications...</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+                            <li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+                            <li><a href="#exit"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+    </div>
+    <footer class="navbar-fixed-bottom" style=" background: linear-gradient(-90deg,  #00344c , #a1dbf7)!important; z-index: 1000;">
+        <div class="container-fluid">
+            <p class="pull-right " style="padding-top: .5%; padding-right: 3%; font-size: 10px; font-weight: bolder; color: #fff;">&copy; 2016 - Powered by <a href="http://www.simplevia.com" style="color: #21d23e;">QuickTrack</a></p>
+        </div>
+    </footer>
+</body>
+</html>
