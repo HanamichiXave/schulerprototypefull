@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Library";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <br>
+    <br>
+    <div class="page-header" style="color: #000033">
+        <center><h2><strong>Super Admin Management</strong></h2><br /></center>
+    </div>
+    <!-- your code start here -->
+    <!-- Please observe indention -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center-block">
+            <a href="@Url.Action("Asset", "Asset")">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="~/Content/images/reserved.png" height="100" width="100" alt="" />
+                    <div class="overlay">
+                        <h2>Asset</h2>
+                        <p class="info">
+                            Managing lesson plans, students grades, and reports for the assigned class.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+

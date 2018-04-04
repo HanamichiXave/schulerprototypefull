@@ -1,0 +1,404 @@
+﻿@{
+    ViewBag.Title = "Asset";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+  <div class="container" >
+     <br>
+     <br>
+     <div class="page-header" style="color: #000033">
+        <h2><strong>Asset Management</strong></h2>
+     </div>
+     <ol class="breadcrumb" style="background-color: #D9EDF7">
+        <li><i class="fa fa-home fa-2x" aria-hidden="true"></i>Home</li>
+        <li><a href="#"></a></li>
+     </ol>
+     <!-- your code start here -->
+     <!-- Please observe indention -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
+           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div data-toggle="modal" data-target="#modal1">
+                 <div class="hovereffect">
+                    <img class="img-responsive" src="~/Content/images/asset.png" height="100" width="100" alt="" />
+                    <div class="overlay">
+                       <h2>Asset Check-In & Check-Out</h2>               
+                       <p class="info">
+                          Submit a form of check in or check for an asset.
+                       </p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     <!-- end of your code -->
+     <!-- footer here -->
+     <hr />
+     <footer class="navbar-fixed-bottom">
+        <div class="container-fluid footer">
+           <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+        </div>
+     </footer>
+     <!-- end foooter -->
+  </div>
+
+  <!--Asset Check-in & Check-out Modal -->
+  <div id="modal1" class="modal fade" role="dialog">
+     <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+           <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title">Asset Check-in &amp; Check-out</h3>
+           </div>
+           <div class="modal-body">
+              <div class="row">
+                 <form class="col-lg-12">
+                    <div class="col-lg-12">
+                       <ul class="nav nav-pills nav-justified" style="margin-bottom: 10px;">
+                          <li class="active"><a data-toggle="tab" href="#asset-check-in">Asset Check-in</a></li>
+                          <li><a data-toggle="tab" href="#asset-check-out">Asset Check-out</a></li>
+                       </ul>
+                    </div>
+                    <div class="tab-content">
+                       <div id="asset-check-in" class="tab-pane fade in active">
+                          <div class="col-lg-12 center-block" style="margin-bottom: 10px;">
+                             <a href="#" class="btn btn-default" data-toggle="modal" data-target="#modal2">View Transactions</a>
+                          </div>
+                          <div class="col-lg-12">
+                             <div class="panel panel-custom">
+                                <div class="panel-heading"><i class="fa fa-calendar-check-o"></i>&nbsp&nbspAsset Informations</div>
+                                <div class="panel-body">
+                                   <div class="col-md-12 col-lg-12">
+                                      <div class="pull-right">
+                                         <div class="form-inline">
+                                            <label>Check-in Number: </label>
+                                            <input class="form-control" type="" name="" readonly="" disabled="">
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <br><br><br><br>
+                                   <div class="row">
+                                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" style="text-align: center;">
+                                         <h4>Item / Product</h4>
+                                         <div class="form-group">
+                                            <figure>
+                                               <img id="blah3" src="" height="160">
+                                               <figcaption>
+                                                  <span class="btn btn-file">
+                                                  <input class="required input-sm" type="file" id="imgInp3" name="file" style="width: 90px;">
+                                                  </span>
+                                               </figcaption>
+                                            </figure>
+                                         </div>
+                                      </div>
+                                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                            <div class="form-group">
+                                               <h5>Product Status</h5>
+                                               <select class="form-control">
+                                                  <option disabled selected="">Choose your option</option>
+                                                  <option>Active</option>
+                                                  <option>In-Active</option>
+                                               </select>
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Department Assign</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Location</h5>
+                                               <select class="form-control">
+                                                  <option disabled selected="">Choose your option</option>
+                                                  <option>Site</option>
+                                                  <option>Warehouse</option>
+                                               </select>
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Date of Check-in</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Items / Product Description</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>RFID Tag</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Product Condition</h5>
+                                               <select class="form-control">
+                                                  <option disabled selected="">Choose your option</option>
+                                                  <option>Poor</option>
+                                                  <option>Good</option>
+                                                  <option>Excellent</option>
+                                               </select>
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Warranty Coverage</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Warranty Date</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                         </div>
+                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                            <div class="form-group">
+                                               <h5>Name of Person In Charge</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Department Head</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Quantity / Units</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Time of Check-in</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Manufacturer</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Brand / Model</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Remarks</h5>
+                                               <textarea style="resize: none;" class="form-control" rows="8"></textarea>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <div id="asset-check-out" class="tab-pane fade">
+                          <div class="col-lg-12" style="margin-bottom: 10px;">
+                             <button class="btn btn-info center-block">View Transactions</button>
+                          </div>
+                          <div class="col-lg-12">
+                             <div class="panel panel-custom">
+                                <div class="panel-heading"><i class="fa fa-calendar-check-o"></i>&nbsp&nbspAsset Informations</div>
+                                <div class="panel-body">
+                                   <div class="col-md-12 col-lg-12">
+                                      <div class="pull-right">
+                                         <div class="form-inline">
+                                            <label>Check-in Number: </label>
+                                            <input class="form-control" type="" name="" readonly="" disabled="">
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <br><br><br><br>  
+                                   <div class="row">
+                                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" style="text-align: center;">
+                                         <h4>Item / Product</h4>
+                                         <div class="form-group">
+                                            <figure>
+                                               <img id="blah3" src="" height="160">
+                                               <figcaption>
+                                                  <span class="btn btn-file">
+                                                  <input class="required input-sm" type="file" id="imgInp3" name="file" style="width: 90px;">
+                                                  </span>
+                                               </figcaption>
+                                            </figure>
+                                         </div>
+                                      </div>
+                                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                            <div class="form-group">
+                                               <h5>Product Status</h5>
+                                               <select class="form-control">
+                                                  <option disabled selected="">Choose your option</option>
+                                                  <option>Active</option>
+                                                  <option>In-Active</option>
+                                               </select>
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Department Assign</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Location</h5>
+                                               <select class="form-control">
+                                                  <option disabled selected="">Choose your option</option>
+                                                  <option>Site</option>
+                                                  <option>Warehouse</option>
+                                               </select>
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Date of Check-in</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Items / Product Description</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>RFID Tag</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Warranty Coverage</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Warranty Date</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                         </div>
+                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                            <div class="form-group">
+                                               <h5>Name of Person In Charge</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Department Head</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Quantity / Units</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Time of Check-in</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Manufacturer</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Brand / Model</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Reasons of Check-out</h5>
+                                               <textarea style="resize: none;" class="form-control" rows="5"></textarea>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <br>
+                                   <div class="col-lg-12" style="border-top: 1px dotted #8c8b8b; border-bottom: 1px dotted #8c8b8b;">
+                                      <div class="row">
+                                         <br>
+                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                            <div class="form-group">
+                                               <h5>Name of Person Received Asset</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Contact Number</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Location of Received Asset</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                         </div>
+                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                            <div class="form-group">
+                                               <h5>Date Received Asset</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Department Section</h5>
+                                               <input class="form-control" type="" name="">
+                                            </div>
+                                            <div class="form-group">
+                                               <h5>Product Condition</h5>
+                                               <select class="form-control">
+                                                  <option disabled selected="">Choose your option</option>
+                                                  <option>Poor</option>
+                                                  <option>Good</option>
+                                                  <option>Excellent</option>
+                                               </select>
+                                            </div>
+                                         </div>
+                                      </div>
+                                      <br>
+                                   </div>
+                                   <div class="col-lg-12">
+                                      <br>
+                                      <div class="row">
+                                         <div class="col-lg-12">
+                                            <button class="btn btn-info pull-right" type="button"><i class="fa fa-print"></i> Print</button>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </form>
+              </div>
+           </div>
+           <div class="modal-footer">
+              <button id="save" onclick="save()" class="btn btn-success" type="button" name="save-details">Save</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+           </div>
+        </div>
+     </div>
+  </div>
+  <!-- End of Modal -->
+  <!--Sample Modal -->
+  <div id="sample" class="modal fade" role="dialog">
+     <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+           <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title">Sample Modal</h3>
+           </div>
+           <div class="modal-body">
+              <div class="row">
+                 awdawdawdaw
+              </div>
+           </div>
+           <div class="modal-footer">
+              <button id="save" onclick="save()" class="btn btn-success" type="button" name="save-details">Proceed to Check-Out</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+           </div>
+        </div>
+     </div>
+  </div>
+
+  <a href="#" class="btn btn-default" data-toggle="modal" data-target="#modal1">Show dialog</a>
+
+<div class="modal fade modal-draggable" id="modaal1" tabindex="-1" role="dialog" aria-labelledby="testModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="testModalLabel">Test dialog</h4>
+      </div>
+      <div class="modal-body">
+        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#modal2">Show dialog</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade modal-draggable" id="modal2" tabindex="-1" role="dialog" aria-labelledby="testModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="testModalLabel">Test dialog</h4>
+      </div>
+      <div class="modal-body">
+        <p>Test dialog...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  @Scripts.Render("~/Scripts/js/Asset/Asset.js")

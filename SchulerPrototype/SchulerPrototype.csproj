@@ -148,6 +148,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\SecurityController.cs" />
+    <Compile Include="Controllers\LibraryController.cs" />
+    <Compile Include="Controllers\AssetController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -465,10 +467,20 @@
     <Content Include="Views\Teacher\class_attendance.cshtml" />
     <Content Include="Views\Security\InOutLog.cshtml" />
     <Content Include="Views\Security\dashboard.cshtml" />
+    <Content Include="Views\Library\Library.cshtml" />
+    <Content Include="Views\Asset\Asset.cshtml" />
+    <Content Include="Content\images\asset.png" />
+    <Content Include="Content\images\checkin.png" />
+    <Content Include="Content\images\library.png" />
+    <Content Include="Content\images\reserved.png" />
+    <Content Include="Scripts\js\Asset\Asset.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Library\" />
+    <Folder Include="Views\Asset\" />
+    <Folder Include="Scripts\js\Asset\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
